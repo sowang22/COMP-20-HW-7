@@ -23,7 +23,7 @@
 	{
 		"artist" : "Avicii",
 		"title" : "Wake Me Up",
-		"genre" : ["EDM"],
+		"genre" : ["EDM", "Dance"],
 		"year" : 2013
 	},
 
@@ -37,7 +37,7 @@
 	{
 		"artist" : "Cascada",
 		"title" : "Everytime We Touch",
-		"genre" : ["Dance"],
+		"genre" : ["Dance", "Pop"],
 		"year" : 2015
 	},
 
