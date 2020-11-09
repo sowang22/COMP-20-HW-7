@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jokes API</title>
+	<script>
+		function getJokes() {
+			request = new XMLHttpRequest();
+			console.log("1 - Created request");
+			request.open("GET", "https://official-joke-api.appspot.com/random_joke", true);
+			console.log("2 - Opened the API");
+ 	
+			request.onreadystatechange = function() {
+				console.log("3 - Start of event");
+			
+				if (request.readyState == 4 && request.status == 200) {
+					console.log("5 - Data loaded/ready to go");
+
+					var result = request.responseText;
+					var data = JSON.parse(result);
+					var returnHTML = data["setup"] + "<br/>" + "<br/>" + data["punchline"] + "<br/>";
+					document.getElementById("joke").innerHTML = returnHTML;
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+					document.getElementById("joke").innerHTML = "Oops, bad HTTP status.";
+				}
+
+				else if (request.readyState == 3) {
+					console.log("6 - Almost ready, waiting on data");
+					document.getElementById("joke").innerHTML = "Almost ready!";
+
+				}
+
+			}
+
+			request.send();
+			console.log("4 - HTTP request sent");
+		}
+	</script>
+</head>
+
+<body onload="getJokes()">
+	<h1>And the joke is on YOU!</h1>
+	<div id="joke" style="font-size: 25px"></div>
+	<p> (refresh for a new joke) </p>
+
+	<br/>
+
+	<h2> API Questions </h2>
+
+	<p> 1. I decided to use the Jokes API. This is an API that has a collection of random jokes, all of which are submitted by coders around the world via a Pull Request on Github. This API contains a plethora of jokes – programming and non-programming – and can generate 1 or more jokes at a time. There are multiple endpoints to this API that allow the user to specify what exactly they want returned. In other words, there is an option to get 1 random joke at a time, which is what I did, but there exist other options such as getting 10 jokes at a time or getting a certain type of joke. 
+	</p>
+
+	<p> 2. I found the website through the public API resources under the modules/reading assignment. This is the <a href="https://github.com/15Dkatz/official_joke_api">link</a>: https://github.com/15Dkatz/official_joke_api </p>
+
+	<p> 3. Here, I made a GET request to the API. Specifically, the request was made to retrieve 1 random joke – there were other options, however, I felt the 1 random joke was most conducive to this assignment. The API returned a JSON object with key-value pairs such as "id", "type", "setup", and "punchline". Then, I processed the data to only display the actual joke, so we only needed to keep the "setup" and "punchline" keys. There was no specific parameter that needed to be sent when making the request. In this API, all we want to do is make a request to the API which will return 1 joke. Our return value does not depend on certain parameters to get it to work. </p>
+
+	<p> 4. The purpose of this API is to be used for light-hearted jokes. So, 2 applications come to mind:
+		<ul> 
+			<li> Personal Blog. For those invested in writing about their daily lives/activities, what better way to start out the day/post with a joke? Keeping on the light-hearted theme, this would be a great way to allow creators to engage more viewers with their material. </li>
+			<li> Media Sites. Many online media sites – news organizations, multimedia platforms, social media, etc. (think Buzzfeed, NY Times) have daily comics or puzzles. So why not a daily joke? These sites could use a daily joke to keep it more light-hearted and entertaining for readers. </li>
+		</ul>
+	 </p>
+</body>
+</html>
