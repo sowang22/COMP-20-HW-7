@@ -1,0 +1,85 @@
+[
+	{
+		"artist" : "Kanye West",
+		"title" : "Flashing Lights",
+		"genre" : ["Hip Hop"],
+		"year" : 2007
+	},
+
+	{
+		"artist" : "Britney Spears",
+		"title" : "Circus",
+		"genre" : ["Pop"],
+		"year" : 2008
+	},
+
+	{
+		"artist" : "Miley Cyrus",
+		"title" : "Mother's Daughter",
+		"genre" : ["Pop"],
+		"year" : 2019
+	},
+
+	{
+		"artist" : "Avicii",
+		"title" : "Wake Me Up",
+		"genre" : ["EDM"],
+		"year" : 2013
+	},
+
+	{
+		"artist" : "NCT 127",
+		"title" : "Superhuman",
+		"genre" : ["K-pop"],
+		"year" : 2019
+	},
+
+	{
+		"artist" : "Cascada",
+		"title" : "Everytime We Touch",
+		"genre" : ["Dance"],
+		"year" : 2015
+	},
+
+	{
+		"artist" : "Rick Astley",
+		"title" : "Never Gonna Give You Up",
+		"genre" : ["Pop"],
+		"year" : 1987
+	},
+
+	{
+		"artist" : "Lil Wayne",
+		"title" : "Uproar",
+		"genre" : ["Hip Hop"],
+		"year" : 2018
+	},
+
+	{
+		"artist" : "Nicki Minaj",
+		"title" : "Good Form",
+		"genre" : ["Hip Hop"],
+		"year" : 2018
+	},
+
+	{
+		"artist" : "Tiesto",
+		"title" : "Red Lights",
+		"genre" : ["EDM"],
+		"year" : 2013
+	},
+
+	{
+		"artist" : "Kygo",
+		"title" : "Freedom",
+		"genre" : ["EDM"],
+		"year" : 2020
+	},
+
+	{
+		"artist" : "Taylor Swift",
+		"title" : "Our Song",
+		"genre" : ["Country"],
+		"year" : 2007
+	}
+]
